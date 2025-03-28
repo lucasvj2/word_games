@@ -1,0 +1,6 @@
+numpy==2.2.4
+Pillow==11.1.0
+pyautogui==0.9.54
+Quartz==0.0.1.dev0
+torch==2.6.0
+torchvision==0.21.0
