@@ -18,6 +18,6 @@ def click_path(path):
     for tile in path:
         pos = (scale(tile.xc), scale(tile.yc))
         mouse_event(kCGEventLeftMouseDown, pos)
-        time.sleep(0.02)  # Simulate press duration
+        time.sleep(0.02)
         mouse_event(kCGEventLeftMouseUp, pos)
-        time.sleep(0.05)  # Pause between clicks
+        time.sleep(0.05)

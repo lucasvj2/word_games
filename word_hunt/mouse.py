@@ -14,7 +14,6 @@ def drag_path(path):
 
     def scale(x): return x / 2  # Retina fix
 
-    # Start drag
     start = path[0]
     mouse_event(kCGEventLeftMouseDown, (scale(start.xc), scale(start.yc)))
     time.sleep(0.01)
@@ -22,8 +21,6 @@ def drag_path(path):
     for tile in path[1:]:
         mouse_event(kCGEventLeftMouseDragged, (scale(tile.xc), scale(tile.yc)))
         time.sleep(0.02)
-        # time.sleep(1)
 
-    # End drag
     mouse_event(kCGEventLeftMouseUp, (scale(path[-1].xc), scale(path[-1].yc)))
     time.sleep(0.05)
