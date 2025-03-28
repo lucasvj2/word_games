@@ -17,7 +17,7 @@ def find_enter_button(image):
 
     for cnt in contours:
         x, y, w, h = cv2.boundingRect(cnt)
-        if 4.5 < w / h < 5.5: #could be different size
+        if 4.5 < w / h < 5.5:
             return (x, y, w, h)
     
     return (-1, -1, -1, -1)

@@ -39,7 +39,7 @@ def ocr_cell(cell_img, model, classes):
     _, cell = cv2.threshold(cell, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
     cell1 = cv2.resize(cell, (64, 64))
     cell1 = cell1.astype(np.float32) / 255.0
-    tensor = torch.tensor(cell1).unsqueeze(0).unsqueeze(0)  # shape [1, 1, 64, 64]
+    tensor = torch.tensor(cell1).unsqueeze(0).unsqueeze(0) 
 
     model.eval()
     with torch.no_grad():

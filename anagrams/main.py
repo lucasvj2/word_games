@@ -36,9 +36,6 @@ def main():
             points += 2200
             
     print(f"✅ Points: {points}")
-    
-    # if points <= 200000:
-    #     return
 
     for (word, path) in found_words:
         path.append(enter)

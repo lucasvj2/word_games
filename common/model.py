@@ -7,7 +7,7 @@ class LetterCNN(nn.Module):
         self.conv1 = nn.Conv2d(1, 32, kernel_size=3)
         self.conv2 = nn.Conv2d(32, 64, kernel_size=3)
         self.fc1 = nn.Linear(64 * 14 * 14, 128)
-        self.fc2 = nn.Linear(128, 26)  # 26 classes A–Z
+        self.fc2 = nn.Linear(128, 26)
 
     def forward(self, x):
         x = F.relu(self.conv1(x))
